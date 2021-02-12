@@ -1,0 +1,45 @@
+package mk;
+import java.util.*;
+public class Zohoclass {
+	
+	static void process(String inputstring) {
+		
+		int index =inputstring.length()/2;
+		
+for(int col =0 ; col < inputstring.length();col++) {
+			
+			
+			for(int row =0 ; row < inputstring.length();row++) {
+				if(row < (inputstring.length()-(col+1) )){
+					System.out.print(" ");
+				}else {
+					if(index+col < inputstring.length()) {
+						
+						System.out.print(inputstring.charAt(index+col));
+					}
+					else {
+						index = 0 ;
+					System.out.print(inputstring.charAt(index+col));}
+					
+				}
+				
+			}System.out.println();
+		}
+
+		
+	}
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner (System.in);
+		
+		String inputtestcase= sc.next();
+		
+		process(inputtestcase);
+		
+		
+		// TODO Auto-generated method stub
+		
+		
+	}
+
+}
